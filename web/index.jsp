@@ -19,8 +19,8 @@
         height: 72px ;
         background: #458fce ;
       }
-      .logo {float: left;}
       .header .logo {
+        float: left;
         color: #fff ;
         line-height: 72px ;
         font-size: 30px ;
@@ -54,7 +54,7 @@
 
       .login {
         float: right ;
-        color: #fff ;
+        color: yellow ;
         line-height: 72px ;
         margin-right: 20px ;
       }
@@ -70,12 +70,34 @@
       <li><a href="javascript:void(0)"> 欣赏美文</a></li>
       <li><a href="javascript:void(0)"> 赞助</a></li>
     </ul>
+    <div class="login">
+      <span><a href="login.jsp">登陆</a></span>
+      <span>|</span>
+      <span><a href="javascript:void(0)">注册</a></span>
+    </div>
   </div>
 
-  <div class="login">
-    <span><a href="javascript:void(0)">登陆</a></span>
-    <span>|</span>
-    <span><a href="javascript:void(0)">注册</a></span>
+  <div id="banner_main">
+    <div id="banner">
+      <script language =javascript >
+          var curIndex=1;
+          //时间间隔 单位毫秒
+          var timeInterval=3000;
+          setInterval(changeImg,timeInterval);
+          function changeImg()
+          {
+              var obj=document.getElementById("showpic");
+              if (curIndex==5) {
+                  curIndex=1;
+              } else {
+                  curIndex+=1;
+              }
+              obj.src="img/" + curIndex + ".jpg";
+          }
+      </script>
+      <img src="img/1.jpg" width="970" height="280" id="showpic" />
+    </div>
   </div>
+
   </body>
 </html>
