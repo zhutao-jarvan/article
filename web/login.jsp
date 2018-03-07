@@ -6,7 +6,7 @@
     <title>注册登录</title>
 </head>
 <body>
-<form method="post" action="loginController.jsp">
+<form method="post" action="jsp/loginController.jsp">
     <label for="username">用户名:</label>
     <input type="text"  name="username" id="username" value="" />
     <label for="password">密码:</label>
