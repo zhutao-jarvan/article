@@ -21,8 +21,33 @@
     <input type="text"  name="username" id="username" value="" />
     <label for="password">密码:</label>
     <input type="password"  name="password" id="password" value="" />
-    <input type="submit" value="登录"  name="submit" />
+    <input type="submit" value="登录"  name="submit" onclick="userLoginRgister()"/>
     <input type="reset" value="注册" name="reset" />
 </form>
+<script>
+    function userLoginRgister() {
+        var xmlhttp = new XMLHttpRequest();
+        var username = document.getElementById("username");
+        var password = document.getElementById("password");
+        var data = "username=" + username + "&password" + password;
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                var resp = xmlhttp.responseText;
+                switch (resp) {
+                    case "0": //登录成功，3秒跳转首页
+                        break;
+                    case "1": //用户名错误
+                        break;
+                    case "2": //密码错误
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        xmlhttp.open("POST", "loginController.jsp", true);
+        xmlhttp.send(data);
+    }
+</script>
 </body>
 </html>
