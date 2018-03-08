@@ -37,8 +37,4 @@
       <img src="img/1.jpg" width="970" height="280" id="showpic" />
     </div>
   </div>
-  <div id="login">
-  </div>
-
-  </body>
 </html>
