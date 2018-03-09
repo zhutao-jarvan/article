@@ -26,7 +26,7 @@
             <c:otherwise>
                 <span><a href="javascript:void(0)">欢迎您，${sessionScope.username}</a></span>
                 <span> | </span>
-                <span><a href="javascript:void(0)">退出</a></span>
+                <span><a href="jsp/logout.jsp">退出</a></span>
             </c:otherwise>
         </c:choose>
     </div>
