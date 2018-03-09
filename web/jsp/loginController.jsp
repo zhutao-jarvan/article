@@ -23,6 +23,7 @@
     LoginUser loginUser = PostJsonUtils.getLoginData(in, size);
     String username = loginUser.getUsername();
     String password = loginUser.getPassword();
+    String action = loginUser.getAction();
 
     //如果用户名和密码不为空
     if(StringUtils.isEmpty(username) || StringUtils.isEmpty(password)){

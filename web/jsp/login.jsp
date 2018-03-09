@@ -19,8 +19,8 @@
     <input type="text"  name="username" id="username" value="" />
     <label for="password">密码:</label>
     <input type="password"  name="password" id="password" value="" />
-    <input type="submit" value="登录"  name="submit" onclick="userLoginRgister('login')"/>
-    <input type="reset" value="注册" name="reset" />
+    <input type="submit" value="登录"  name="login" onclick="userLoginRgister('login')"/>
+    <input type="reset" value="注册" name="register" onclick="userLoginRgister('register')" />
     <span id="hint"></span>
 </div>
 <script>
