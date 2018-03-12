@@ -9,7 +9,7 @@
 <html>
 <head>
     <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-    <title>登录</title>
+    <title>注册</title>
     <link href="../css/common.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -35,7 +35,7 @@
                 console.log("xmlhttp.resonseText: " + resp);
                 document.getElementById("hint").style.color = "red";
                 switch (resp) {
-                    case "0": //登录成功，3秒跳转首页
+                    case "0": //注册成功，3秒跳转首页
                         document.getElementById("hint").innerHTML = "注册成功";
                         document.getElementById("hint").style.color = "green";
                         window.setTimeout("window.location='index.jsp'",3000);
@@ -43,7 +43,7 @@
                     case "-1": //用户名和密码不能为空！
                         document.getElementById("hint").innerHTML = "用户名和密码不能为空";
                         break;
-                    case "-2": //用户名不存在！
+                    case "-2": //用户名存在！
                         document.getElementById("hint").innerHTML = "用户名存在";
                         break;
                     case "-3": //用户名或密码错误！

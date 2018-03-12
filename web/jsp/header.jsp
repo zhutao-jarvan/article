@@ -21,7 +21,7 @@
             <c:when test="${empty sessionScope.username}">
                 <span><a href="/jsp/login.jsp">登陆</a></span>
                 <span>|</span>
-                <span><a href="javascript:void(0)">注册</a></span>
+                <span><a href="/jsp/register.jsp">注册</a></span>
             </c:when>
             <c:otherwise>
                 <span><a href="javascript:void(0)">欢迎您，${sessionScope.username}</a></span>
