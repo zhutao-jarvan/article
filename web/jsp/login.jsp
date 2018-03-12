@@ -19,12 +19,11 @@
     <input type="text"  name="username" id="username" value="" />
     <label for="password">密码:</label>
     <input type="password"  name="password" id="password" value="" />
-    <input type="submit" value="登录"  name="login" onclick="userLoginRgister('login')"/>
-    <input type="reset" value="注册" name="register" onclick="userLoginRgister('register')" />
+    <input type="submit" value="登录"  name="login" onclick="userLogin('login')"/>
     <span id="hint"></span>
 </div>
 <script>
-    function userLoginRgister(action) {
+    function userLogin(action) {
         var xmlhttp = new XMLHttpRequest();
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
@@ -39,7 +38,7 @@
                     case "0": //登录成功，3秒跳转首页
                         document.getElementById("hint").innerHTML = "登录成功";
                         document.getElementById("hint").style.color = "green";
-                        window.setTimeout("window.location='../index.jsp'",3000);
+                        window.setTimeout("window.location='index.jsp'",3000);
                         break;
                     case "-1": //用户名和密码不能为空！
                         document.getElementById("hint").innerHTML = "用户名和密码不能为空";

@@ -11,10 +11,10 @@
   <head>
 
     <title>首页</title>
-    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../css/common.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-  <%@include file="jsp/header.jsp"%>
+  <%@include file="header.jsp"%>
 
   <div id="banner_main">
     <div id="banner">
@@ -31,10 +31,10 @@
               } else {
                   curIndex+=1;
               }
-              obj.src="img/" + curIndex + ".jpg";
+              obj.src="../img/" + curIndex + ".jpg";
           }
       </script>
-      <img src="img/1.jpg" width="970" height="280" id="showpic" />
+      <img src="../img/1.jpg" width="970" height="280" id="showpic" />
     </div>
   </div>
 </html>
