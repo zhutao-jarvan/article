@@ -7,6 +7,7 @@ import utils.DataBaseUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 
@@ -34,9 +35,10 @@ public class TestInsertArticle {
         System.out.println("新增成功！");
     }
 
-    public static void main(String[] args) {
-        Date d = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        System.out.println("当前时间：" + sdf.format(d));
+    @Test
+    public void getCategroyList() {
+        String sql = "select * from categroy";
+        List list  = DataBaseUtils.queryForList(sql);
+        System.out.println(list);
     }
 }
