@@ -37,4 +37,34 @@
       <img src="../img/1.jpg" width="970" height="280" id="showpic" />
     </div>
   </div>
+  <!-- 内容区域 -->
+  <div style='border:1px solid #ccc'>
+    <br/><br/>
+    <div class='category'>
+      <div class='title'>连载小说</div>
+      <ul class='items'>
+        <li class='item'>
+          <div class="item-banner">
+            <div class="item-header">生活总是充满了乐趣</div>
+            <div class="item-name">聊聊我的大学室友</div>
+            <div class="item-author">@张三 著</div>
+          </div>
+          <div class="item-description">那些回忆，那些事。。。</div>
+        </li>
+        <li class='item'></li>
+        <li class='item'></li>
+        <div style='clear:both'></div>
+      </ul>
+    </div>
+
+    <div class='category'>
+      <div class='title'>编程代码类</div>
+      <ul class='items'>
+        <li class='item'></li>
+        <li class='item'></li>
+        <div style='clear:both'></div>
+      </ul>
+    </div>
+  </div>
+
 </html>

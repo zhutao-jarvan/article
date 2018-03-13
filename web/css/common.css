@@ -47,6 +47,58 @@ a {
     margin-right: 20px ;
 }
 
+#banner_main {
+    text-align: center;
+    margin: 20px;
+}
+
 #hint {
-    font: red;
+    color: red;
+}
+
+.category .title {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #cac5c5;
+    height: 30px;
+    text-indent:1em;
+    font-size:18px;
+    color:#666;
+}
+.category .items {
+    margin-left:10px;
+}
+.category .items .item {
+    width: 230px;
+    height: 320px;
+    background: #ccc;
+    margin: 20px;
+    float: left;
+    margin-right: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.item-banner {
+    background-color: #666666;
+    color: #ffffff;
+}
+
+.item-header {
+    font-size: 12px;
+    line-height: 52px;
+}
+
+.item-name {
+    font-size: 22px;
+    line-height: 74px;
+}
+
+.item-author {
+    font-size: 14px;
+    text-indent: 7em;
+}
+
+.item-description {
+    color: azure;
+    color: #83b3b3;
 }
