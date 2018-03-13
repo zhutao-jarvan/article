@@ -2,6 +2,7 @@ package test;
 
 import bean.User;
 import org.junit.jupiter.api.Test;
+import service.ArticleService;
 import service.LoginService;
 import utils.DataBaseUtils;
 
@@ -37,8 +38,15 @@ public class TestInsertArticle {
 
     @Test
     public void getCategroyList() {
-        String sql = "select * from categroy";
+        String sql = "select * from category";
         List list  = DataBaseUtils.queryForList(sql);
+        System.out.println(list);
+    }
+
+    @Test
+    public void getArticle() {
+        ArticleService ArticleService = new ArticleService();
+        List list = ArticleService.getArticlesByCategoryId(2,0,10);
         System.out.println(list);
     }
 }
