@@ -1,4 +1,6 @@
 <%@ page import="service.ArticleService" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Map" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -8,7 +10,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<% ArticleService articleService = new ArticleService(); %>
+
 <html>
   <head>
 
@@ -59,11 +61,24 @@
       </ul>
     </div>
 
+    <%
+      ArticleService articleService = new ArticleService();
+      List<Map<String, Object>> art_list = articleService.getArticlesByCategoryId(2, 0, 6);
+      pageContext.setAttribute("art_list", art_list);
+    %>
     <div class='category'>
       <div class='title'>编程代码类</div>
       <ul class='items'>
-        <li class='item'></li>
-        <li class='item'></li>
+        <c:forEach items="${art_list}" var="item">
+          <li class='item'>
+            <div class='item-banner'>
+              <div class='item-header'>${item.header}</div>
+              <div class='item-name'>${item.name}</div>
+              <div class='item-author'>@${item.author} 著</div>
+            </div>
+            <div class='item-description'>${item.description}</div>
+          </li>
+        </c:forEach>
         <div style='clear:both'></div>
       </ul>
     </div>

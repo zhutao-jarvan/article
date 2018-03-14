@@ -13,7 +13,7 @@ public class ArticleService {
                 + " and is_published = 1"
                 + " and category_id = ?"
                 + "  order by update_time desc limit ?,?";
-        return DataBaseUtils.queryForList(sql, categoryId,start,end);
+        return DataBaseUtils.queryForList(sql, categoryId, start,end);
     }
 
     public List<Map<String,Object>> getContentByArticleId(String id){
